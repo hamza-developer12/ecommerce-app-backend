@@ -11,7 +11,7 @@ import orderRouter from './routes/orderRoutes.js';
 dotenv.config();
 const app = express();
 app.use(cors({
-    origin: "commerce-app-12.netlify.app",
+    origin: "https://ecommerce-app-12.netlify.app",
     credentials: true,
 }));
 app.use(express.json());
