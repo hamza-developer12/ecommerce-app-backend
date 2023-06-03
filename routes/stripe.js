@@ -9,10 +9,7 @@ const stripeInstance = stripe(process.env.STRIPE_SECRET_KEY)
 let products;
 let productQuantity;
 router.post('/create-checkout-session', async (req, res) => {
-    res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://ecommerce-app-backend-12.vercel.app"
-  );
+    res.setHeader('Access-Control-Allow-Origin', '*')
     const { price, product, quantity, user } = req.body;
 
     products = product;
