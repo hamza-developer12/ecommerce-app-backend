@@ -10,6 +10,11 @@ import stripeRouter from './routes/stripe.js';
 import orderRouter from './routes/orderRoutes.js';
 dotenv.config();
 const app = express();
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Credentials', true);
+  next();
+});
+
 app.use(cors({
     origin: "https://ecommerce-app-12.netlify.app",
     credentials: true,
