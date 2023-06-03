@@ -9,7 +9,7 @@ const stripeInstance = stripe(process.env.STRIPE_SECRET_KEY)
 let products;
 let productQuantity;
 router.post('/create-checkout-session', async (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173')
     const { price, product, quantity, user } = req.body;
 
     products = product;
