@@ -12,7 +12,10 @@ dotenv.config();
 const app = express();
 
 
-app.use(cors());
+app.use(cors({
+    origin: "https://ecommerce-app-12.netlify.app",
+    credentials: true,
+}));
 app.use(express.json());
 app.use(urlencoded({ extended: true }));
 app.use(cookieParser());
