@@ -9,7 +9,6 @@ const stripeInstance = stripe(process.env.STRIPE_SECRET_KEY)
 let products;
 let productQuantity;
 router.post('/create-checkout-session', async (req, res) => {
-    res.setHeader('ACCESS-CONTROL-ALLOW-ORIGIN','https://ecommerce-app-12.netlify.app')
     const { price, product, quantity, user } = req.body;
 
     products = product;
