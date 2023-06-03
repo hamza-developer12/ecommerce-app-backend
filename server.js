@@ -14,7 +14,7 @@ const app = express();
 
 app.use(cors({
     origin: "https://ecommerce-app-12.netlify.app",
-    allowedHeaders: ["Access-Control-Allow-Origin, origin", "Content-Type: Authorization"],
+    allowedHeaders: ["Access-Control-Allow-Origin, https://ecommerce-app-12.netlify.app", "Content-Type: Authorization"],
     credentials: true,
 }));
 app.use(express.json());
